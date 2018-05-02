@@ -1,0 +1,17 @@
+<!--index.wxml-->
+<view class='title'>IP查询</view>
+<view class="container">
+  <view  class='cityInput'>
+      <input type='text' placeholder='输入ip' bindinput='ipInput' value='{{ip}}'></input>
+  
+      <view class='searchBtn' bindtap='clickButton' >查询</view>
+  </view>
+
+</view>
+<view class='checkRes' style='display: {{resDisplay}}'>
+  <view>您查询的ip ：{{ip}}</view>
+  <view class='res'>{{city}}</view>
+  
+  <view class=''>你的IP是 ：{{tIp}}</view>
+  <view class='res'>{{tCity}}</view>
+</view>

@@ -1,0 +1,50 @@
+<!--index.wxml-->
+<view class='title'>天气查询</view>
+<view class="container">
+
+  <view  class='cityInput'>
+      <input type='text' placeholder='输入城市' bindinput='cityInput' value='{{city}}'></input>
+  
+      <view class='searchBtn' bindtap='clickButton' >查询</view>
+ </view>
+
+</view>
+<view class='checkRes' style='display: {{resDisplay}}'>
+  <view>{{rsCity}}</view>
+  <view>PM2.5 : {{pm25}}</view>
+  <view>{{rsDate}}</view>
+  <view>
+    <image src='{{rsImg}}'></image>
+  </view>
+  <view>{{rsWeather}}</view>
+  <view>{{rsWind}}</view>
+  <view>{{rsTemperature}}</view>
+</view>
+<view class='checkRes' style='display: {{resDisplay}}'>
+  <view>{{rsDate2}}</view>
+  <view>
+    <image src='{{rsImg2}}'></image>
+  </view>
+  <view>{{rsWeather2}}</view>
+  <view>{{rsWind2}}</view>
+  <view>{{rsTemperature2}}</view>
+</view>
+<view class='checkRes' style='display: {{resDisplay}}'>
+  <view>{{rsDate3}}</view>
+  <view>
+    <image src='{{rsImg3}}'></image>
+  </view>
+  <view>{{rsWeather3}}</view>
+  <view>{{rsWind3}}</view>
+  <view>{{rsTemperature3}}</view>
+</view>
+
+<view class='checkRes' style='display: {{resDisplay}}'>
+  <view>{{rsDate4}}</view>
+  <view>
+    <image src='{{rsImg4}}'></image>
+  </view>
+  <view>{{rsWeather4}}</view>
+  <view>{{rsWind4}}</view>
+  <view>{{rsTemperature4}}</view>
+</view>
