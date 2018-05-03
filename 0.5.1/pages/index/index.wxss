@@ -26,3 +26,7 @@ swiper{
 .weui-grids{
   margin-top: 10px
 }
+.weui-grid__icon{
+  width: 45px;
+  height:45px
+}

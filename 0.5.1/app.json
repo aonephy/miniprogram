@@ -9,14 +9,14 @@
   ],
   "window":{
     "backgroundTextStyle":"light",
-    "navigationBarBackgroundColor": "#99ffcc",
+    "navigationBarBackgroundColor": "#64a4fc",
     "navigationBarTitleText": "皮皮侠",
-    "navigationBarTextStyle":"black",
+    "navigationBarTextStyle":"#fff",
     "enablePullDownRefresh":true
   },
   "tabBar": {
     "color": "#dddddd",
-    "selectedColor": "#3cc51f",
+    "selectedColor": "#64a4fc",
     "borderStyle": "black",
     "backgroundColor": "#fff",
     "list": [
