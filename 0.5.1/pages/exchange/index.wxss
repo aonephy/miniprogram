@@ -1,0 +1,17 @@
+/* pages/exchange/index.wxss */
+.weui-btn-area .box{
+  margin: 15px
+}
+.weui-cell_input{
+  border: 1px solid #ccc;
+  border-radius: 3px;  
+}
+.weui-flex__item{
+  margin: auto;
+}
+.weui-flex__item image{
+  width: 20px;
+  height: 20px;
+  display: block;
+  margin: auto;
+}
