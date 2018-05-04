@@ -1,6 +1,9 @@
 /**app.wxss**/
 @import 'weui.wxss';
-.weui-grid{
-/*  border: 1px solid #ccc;*/
-/*  width: 25%;*/
+@import "/wxParse/wxParse.wxss";
+.line-css {
+    height: 1px;
+    background:  #ccc;
+    margin: 20rpx 0px;
+    clear: both
 }

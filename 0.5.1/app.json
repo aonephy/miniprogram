@@ -1,7 +1,7 @@
 {
   "pages":[
-    "pages/article/index",
     "pages/index/index",
+    "pages/article/index",
     "pages/exchange/index",
     "pages/queryip/index",
     "pages/profile/index",

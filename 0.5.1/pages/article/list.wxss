@@ -1,1 +1,8 @@
 /* pages/article/list.wxss */
+.weui-article__title{
+  color:#aaa;
+  text-align:right 
+}
+.weui-article__section{
+  clear: both
+}

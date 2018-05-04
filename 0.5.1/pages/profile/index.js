@@ -1,15 +1,12 @@
 // pages/profile/index.js
+var app = getApp();
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    userInfo: { 
-      avatarUrl:'../../image/icons/mineHL.png',
-      nickName:'昵称',
-      city:'城市'
-    },
+    userInfo:'',
     phoneInfo:{}
   },
 
@@ -21,22 +18,10 @@ Page({
     wx.setNavigationBarTitle({
       title: '我的信息'
     })
-    wx.login({
-      success: function (res) {
-        var code = res.code;
-        wx.getUserInfo({
-          success: function (res) {
-          //  console.log(res)
-            that.setData({
-              userInfo: res.userInfo
-            })
-            getEnData(code,res)
-
-          }
-        })
-        
-      }
-    })
+    
+   this.setData({
+     userInfo: app.globalData.userInfo
+   })
    
     wx.getSystemInfo({
       success: function (res) {
@@ -105,21 +90,4 @@ Page({
   }
 })
 
-function getEnData(c,obj){
 
-  wx.request({
-    url: 'https://s.aonephy.top/api/miniprogram/aes/',
-    data:{
-      code:c,
-      iv:obj.iv,
-      encryptedData:obj.encryptedData
-    },
-    header: {
-      'content-type': 'application/json' // 默认值
-    },
-    success: function (res) {
-      console.log(res.data)
-
-    }
-  })
-}

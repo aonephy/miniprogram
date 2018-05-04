@@ -1,4 +1,4 @@
-// pages/article/list.js
+var WxParse = require('../../wxParse/wxParse.js'); 
 Page({
 
   /**
@@ -24,9 +24,22 @@ Page({
       success: function (res) {
          
          var content = res.data[0].content;
-         
-         content = content.replace(/font/g, 'view');
+         var tmp = "../";
+         var reg = RegExp(tmp, "gm")
          console.log(content)
+
+      //   content = content.replace(reg,'https://s.aonephy.top/')
+         /**
+         * WxParse.wxParse(bindName , type, data, target,imagePadding)
+         * 1.bindName绑定的数据名(必填)
+         * 2.type可以为html或者md(必填)
+         * 3.data为传入的具体数据(必填)
+         * 4.target为Page对象,一般为this(必填)
+         * 5.imagePadding为当图片自适应是左右的单一padding(默认为0,可选)
+         */
+       
+         WxParse.wxParse('article', 'html', content, that, 5);
+
         that.setData({
           rData:res.data[0],
           content:content

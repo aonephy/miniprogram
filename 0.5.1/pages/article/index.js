@@ -69,6 +69,7 @@ Page({
   },
   loadMore:function(){
     console.log(curPage)
+
     getArticle(this,curPage++)
   }
 })
@@ -76,7 +77,10 @@ Page({
 var rData=[];
 
 function getArticle(that,curPage){
-  
+  wx.showToast({
+    title: '加载中',
+    icon: 'loading'
+  });
   wx.request({
     url: 'https://s.aonephy.top/api/miniprogram/getArticleList.php?page=' + curPage,
     
@@ -98,6 +102,7 @@ function getArticle(that,curPage){
       that.setData({
         content: rData,
       })
+      wx.hideToast();
     }
   })
 }
