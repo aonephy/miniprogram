@@ -1,11 +1,13 @@
 {
   "pages":[
+    "pages/article/index",
     "pages/index/index",
     "pages/exchange/index",
     "pages/queryip/index",
     "pages/profile/index",
     "pages/weather/index",
-    "pages/translate/index"
+    "pages/translate/index",
+    "pages/article/list"
   ],
   "window":{
     "backgroundTextStyle":"light",

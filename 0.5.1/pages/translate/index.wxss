@@ -13,3 +13,6 @@
   border-radius: 3px;
   min-height:300px;
 }
+button[type='primary']{
+  background:#64a4fc;
+}

@@ -15,3 +15,7 @@
   display: block;
   margin: auto;
 }
+
+button[type='primary']{
+  background:#64a4fc;
+}
