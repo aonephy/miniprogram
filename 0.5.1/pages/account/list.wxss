@@ -3,12 +3,14 @@
   text-align: center;
   padding: 0px;
   font-size: 1.3em;
-  font-weight: 800
 }
 .weui-flex-title{
-  background: #7bc2ff;
+  background: #64a4fc;
   color: #fff;
-  font-size: 1em
+  font-size: 1.2em;
+  position: fixed;
+  font-weight: 800;
+  width: 100%
 }
 .weui-flex{
   text-align: center;

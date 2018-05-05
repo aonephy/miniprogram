@@ -1,7 +1,7 @@
 
 <view class="page">
     <view class="page__hd">
-      <view class="page__title" >皮皮侠记账系统</view>
+      
     </view>
     <view class="page__bd">
       <view class="weui-cells weui-cells_after-title">    

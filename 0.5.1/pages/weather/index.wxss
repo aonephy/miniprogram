@@ -15,7 +15,7 @@ image{
   line-height: 2;
   background-color: aliceblue;
   border-radius: 3px; 
-  font-size: 0.9em;
+  font-size: 1em;
 }
 .weui-flex__item{
   text-align: center;
