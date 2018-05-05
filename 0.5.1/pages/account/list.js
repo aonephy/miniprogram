@@ -16,7 +16,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    curPage=0;
+    curPage=1;
     rData = [];
 
     var that = this;

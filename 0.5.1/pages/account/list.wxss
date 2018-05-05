@@ -4,13 +4,16 @@
   padding: 0px;
   font-size: 1.3em;
 }
-.weui-flex-title{
+.page__hd{
   background: #64a4fc;
   color: #fff;
   font-size: 1.2em;
   position: fixed;
   font-weight: 800;
   width: 100%
+}
+.page__bd{
+  padding-top:90rpx; 
 }
 .weui-flex{
   text-align: center;

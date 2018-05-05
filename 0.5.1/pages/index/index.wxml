@@ -8,8 +8,8 @@
       autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
           <block wx:for="{{banner}}">
             <swiper-item>
-                <navigator url="{{item.dir}}">
-                <image src="{{item.url}}" class="slide-image" height="150"/>
+                <navigator url="{{item.dir}}" style='height:100%'>
+                <image src="{{item.url}}" class="slide-image" mode="aspectFill" ></image>
               </navigator>
             </swiper-item>
           </block>

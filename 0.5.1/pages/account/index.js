@@ -35,7 +35,7 @@ Page({
       success: function (res) {
       //  console.log(res.data)
           that.data.unionId = res.data
-          console.log(that.data.unionId);
+          
           //update option
           wx.request({
             url: 'https://s.aonephy.top/api/miniprogram/getAccountTypeList.php',
