@@ -14,6 +14,10 @@ Page({
    */
   onLoad: function (options) {
     console.log(options)
+    wx.showLoading({
+      title: '加载中',
+      icon: 'loading'
+    });
     var id = options.id
     var that = this
     wx.request({
@@ -44,6 +48,7 @@ Page({
           rData:res.data[0],
           content:content
         })
+        wx.hideLoading();
       }
     })
   },

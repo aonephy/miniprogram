@@ -11,7 +11,7 @@
               </picker>
             
             </view>
-            <view class="weui-flex__item">
+            <view class="weui-flex change">
               <view>
               <image src='../../image/icons/exchange_409.png'></image>
               </view>

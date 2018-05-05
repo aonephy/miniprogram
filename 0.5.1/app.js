@@ -1,26 +1,15 @@
 App({
   globalData: {
-    userInfo: null
+    userInfo: null,
+    header: {
+      unionId:null
+    }  
   },
   /**
    * 当小程序初始化完成时，会触发 onLaunch（全局只触发一次）
    */
   onLaunch: function () {
-    var that = this
-    wx.login({
-      success: function (res) {
-        var code = res.code;
-        wx.getUserInfo({
-          success: function (res) {
-            console.log(res)
-            
-            getEnData(code, res, that)
-
-          }
-        })
-
-      }
-    })
+  
   },
 
   /**
@@ -45,22 +34,3 @@ App({
   }
 })
 
-function getEnData(c, obj,that) {
-  
-  wx.request({
-    url: 'https://s.aonephy.top/api/miniprogram/aes/',
-    data: {
-      code: c,
-      iv: obj.iv,
-      encryptedData: obj.encryptedData
-    },
-    header: {
-      'content-type': 'application/json' // 默认值
-    },
-    success: function (res) {
-      console.log(res.data)
-      that.globalData.userInfo = res.data
-        
-    }
-  })
-}

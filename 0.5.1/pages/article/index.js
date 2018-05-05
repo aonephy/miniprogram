@@ -77,7 +77,7 @@ Page({
 var rData=[];
 
 function getArticle(that,curPage){
-  wx.showToast({
+  wx.showLoading({
     title: '加载中',
     icon: 'loading'
   });
@@ -102,7 +102,7 @@ function getArticle(that,curPage){
       that.setData({
         content: rData,
       })
-      wx.hideToast();
+      wx.hideLoading();
     }
   })
 }

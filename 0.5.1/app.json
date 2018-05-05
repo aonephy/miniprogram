@@ -1,6 +1,8 @@
 {
   "pages":[
     "pages/index/index",
+    "pages/account/list",
+    "pages/account/index",
     "pages/article/index",
     "pages/exchange/index",
     "pages/queryip/index",
