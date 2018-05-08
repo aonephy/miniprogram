@@ -31,7 +31,7 @@
             <view class="weui-cells weui-cells_after-title">
                 <view class="weui-cell weui-cell_input">
                     <view class="weui-cell__bd">
-                        <input class="weui-input" type='number' focus='{{focus}}' value='{{amount}}' bindinput='InputAmount' placeholder="请输入消费金额" />
+                        <input class="weui-input" type='digit' focus='{{focus}}' value='{{amount}}' bindinput='InputAmount' placeholder="请输入消费金额" />
                     </view>
                 </view>
             </view>

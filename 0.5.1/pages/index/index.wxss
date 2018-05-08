@@ -4,7 +4,7 @@
   height: 100%
 }
 swiper{
-  height: 180px;
+  height: 380rpx;
 }
 .wrap{
 	display: inline-block;
