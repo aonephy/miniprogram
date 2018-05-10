@@ -1,0 +1,26 @@
+/**index.wxss**/
+
+.weui-search-bar{
+  margin-bottom: 10px
+}
+image{
+  width:40px;
+  height: 30px;
+}
+.checkRes{
+  margin: 10px auto;
+  padding: 10px;
+  width: 80%;
+  text-align: center;
+  line-height: 2;
+  background-color: aliceblue;
+  border-radius: 3px; 
+  font-size: 1em;
+}
+.weui-flex__item{
+  text-align: center;
+  vertical-align: middle;
+}
+.weather_data_right{
+  border-left:1px dashed #ccc;
+}

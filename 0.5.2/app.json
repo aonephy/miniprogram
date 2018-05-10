@@ -1,0 +1,44 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/constellation/index",
+    "pages/constellation/list",
+    "pages/account/index",
+    "pages/account/list",
+    "pages/article/index",
+    "pages/article/list",
+    "pages/exchange/index",
+    "pages/queryip/index",
+    "pages/profile/index",
+    "pages/weather/index",
+    "pages/express/index",
+    "pages/translate/index"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#64a4fc",
+    "navigationBarTitleText": "皮皮侠",
+    "navigationBarTextStyle":"#fff",
+    "enablePullDownRefresh":true
+  },
+  "tabBar": {
+    "color": "#aaa",
+    "selectedColor": "#0066fc",
+    "borderStyle": "black",
+    "backgroundColor": "#fff",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "image/home.png",
+        "selectedIconPath": "image/homeHL.png",
+        "text": "主页"
+      },
+      {
+        "pagePath": "pages/profile/index",
+        "iconPath": "image/profile.png",
+        "selectedIconPath": "image/profileHL.png",
+        "text": "我的"
+      }
+    ]
+  }
+}

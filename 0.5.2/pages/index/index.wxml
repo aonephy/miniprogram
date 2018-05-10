@@ -1,0 +1,32 @@
+<view class="page">
+    <view class="page__hd">
+    </view>
+    <view class="page__bd">
+
+      <view class="my-swiper">
+        <swiper indicator-dots="{{indicatorDots}}"
+      autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+          <block wx:for="{{banner}}">
+            <swiper-item>
+                <navigator url="{{item.dir}}" style='height:100%'>
+                <image src="{{item.url}}" class="slide-image" mode="aspectFill" ></image>
+              </navigator>
+            </swiper-item>
+          </block>
+        </swiper>
+      </view>
+
+        <view class="weui-grids">
+          <view class='desc'>
+            <view>热门推荐</view>
+          </view>
+            <block wx:for="{{grids}}" wx:key="*this">
+                <navigator url="{{item.Url}}" open-type="navigate" class="weui-grid" hover-class="weui-grid_active">
+                    <image class="weui-grid__icon" src="{{item.imgUrl}}" />
+                    <view class="weui-grid__label">{{item.Name}}</view>
+                </navigator>
+            </block>
+        </view>
+       
+    </view>
+</view>

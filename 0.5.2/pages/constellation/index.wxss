@@ -1,0 +1,10 @@
+.desc{
+  border-bottom: 1rpx solid #d9d9d9;
+}
+.desc view{
+  border-bottom: 0rpx;
+  border-left: 5px solid #64a4fc;
+  margin: 10px;
+  padding-left: 15px;
+  font-size: 1em;
+}

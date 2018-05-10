@@ -1,0 +1,36 @@
+/* pages/account/index.wxss */
+.page{
+  background: #eee;
+  margin: auto
+}
+.page__hd,.weui-btn-area{
+  background: #fff;
+}
+.page__title{
+  text-align: center;
+  padding: 20px;
+  font-size: 1.3em;
+  font-weight: 800
+}
+.weui-btn-area{
+  padding:30px 20px; 
+  margin: 0px
+}
+
+.weui-btn{
+  background:#64a4fc;
+  color: #fff
+}
+.weui-footer image{
+  width: 30px;
+  height: 30px;
+}
+.weui-footer_fixed-bottom{
+  background:#fff;
+  border-top:1px solid #ccc;
+  bottom: 0;
+}
+.weui-flex{
+  text-align: center;
+  padding: 5px 0px;
+}

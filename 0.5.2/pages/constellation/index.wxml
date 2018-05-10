@@ -1,0 +1,18 @@
+<view class="page">
+    <view class="page__hd">
+    </view>
+
+    <view class="page__bd">
+        <view class="weui-grids">
+          <view class='desc'>
+            <view>星座运势</view>
+          </view>
+            <block wx:for="{{grids}}" wx:key="*this">
+                <navigator url="{{item.Url}}" open-type="navigate" class="weui-grid" hover-class="weui-grid_active">
+                    <image class="weui-grid__icon" src="{{item.imgUrl}}" />
+                    <view class="weui-grid__label">{{item.Name}}</view>
+                </navigator>
+            </block>
+        </view>
+    </view>
+</view>    
