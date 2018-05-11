@@ -1,5 +1,7 @@
 /**index.wxss**/
-
+.page__bd{
+  overflow: auto;
+}
 .weui-search-bar{
   margin-bottom: 10px
 }
@@ -13,7 +15,7 @@ image{
   width: 80%;
   text-align: center;
   line-height: 2;
-  background-color: aliceblue;
+  background-color: #ccf0ff;
   border-radius: 3px; 
   font-size: 1em;
 }
@@ -22,5 +24,5 @@ image{
   vertical-align: middle;
 }
 .weather_data_right{
-  border-left:1px dashed #ccc;
+  border-left:1px dashed #fff;
 }
