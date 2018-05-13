@@ -1,0 +1,10 @@
+/**app.wxss**/
+@import 'weui.wxss';
+@import "/wxParse/wxParse.wxss";
+@import "dist/index.wxss";
+.line-css {
+    height: 1px;
+    background:  #ccc;
+    margin: 20rpx 0px;
+    clear: both
+}

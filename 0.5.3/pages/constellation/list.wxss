@@ -1,0 +1,42 @@
+/* pages/constellation/list.wxss */
+.constellation-img image{
+  margin: auto;
+  display: block;
+  width: 250rpx;
+  height: 250rpx;
+}
+.constellation-star image{
+  width: 150rpx;
+  height: 30rpx;
+}
+.constellation-star{
+  padding-top:50rpx;
+}
+.page{
+  background: #eee;
+}
+.weui-article{
+  padding:0px 0px;
+
+}
+.constellation-img{
+  padding: 10px 0px;
+}
+.yunshi{
+  margin-top:36rpx;
+  background:#fff;
+  padding:0px 10px
+}
+.yunshi .weui-article__section:first-child{
+  border:0px
+}
+.weui-article__section{
+  line-height:2;
+  font-size:1em;
+  padding: 10px 5px;
+  margin:0rpx;
+  border-top: 1px solid #ccc
+}
+.weui-article__section view{
+  color:lightskyblue
+}

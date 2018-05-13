@@ -1,0 +1,79 @@
+<!--index.wxml-->
+<view class="page"> 
+  <view class="page__bd">
+      <view class="weui-search-bar">
+            <view class="weui-search-bar__form">
+                <view class="weui-search-bar__box">
+                    <icon class="weui-icon-search_in-box" type="search" size="14"></icon>
+                    <input type="text" class="weui-search-bar__input" placeholder="查询城市" confirm-type='search' bindconfirm='clickButton' value="{{city}}" focus="{{inputShowed}}" bindinput="cityInput" />
+                    <view class="weui-icon-clear" wx:if="{{city.length > 0}}" bindtap="clearInput">
+                        <icon type="clear" size="14"></icon>
+                    </view>
+                </view>
+                <label class="weui-search-bar__label" hidden="{{inputShowed}}" bindtap="showInput">
+                    <icon class="weui-icon-search" type="search" size="14"></icon>
+                    <view class="weui-search-bar__text">查询城市</view>
+                </label>
+            </view>
+            <view class="weui-search-bar__cancel-btn" hidden="{{!inputShowed}}" bindtap="hideInput">取消</view>
+        </view>
+      
+    <view class="weui-flex">
+            <view class="weui-flex__item" style='font-size:3em'>
+                {{rsDate_}}
+            </view>
+            <view class="weui-flex__item" >
+                <view style='font-size:2em'>{{rsCity}}</view>
+                <view style='text-align:center;font-size:1em'>{{pm25}}</view>
+            </view>
+    </view>
+   
+
+    <view class='checkRes' style='display: {{resDisplay}}'>
+      <view class="weui-flex">
+            <view class="weui-flex__item">
+                <view>{{rsDate}}</view>
+                <view>
+                  <image src='{{rsImg}}'></image>
+                </view>
+                <view>{{rsWeather}}</view>
+                <view>{{rsWind}}</view>
+                <view>{{rsTemperature}}</view>
+            </view>
+            <view class="weui-flex__item weather_data_right">
+                <view>{{rsDate2}}</view>
+                <view>
+                  <image src='{{rsImg2}}'></image>
+                </view>
+                <view>{{rsWeather2}}</view>
+                <view>{{rsWind2}}</view>
+                <view>{{rsTemperature2}}</view>
+            </view>
+      </view>
+    </view>
+
+    <view class='checkRes' style='display: {{resDisplay}}'>
+      <view class="weui-flex">
+            <view class="weui-flex__item">
+                <view>{{rsDate3}}</view>
+                <view>
+                  <image src='{{rsImg3}}'></image>
+                </view>
+                <view>{{rsWeather3}}</view>
+                <view>{{rsWind3}}</view>
+                <view>{{rsTemperature3}}</view>
+            </view>
+            <view class="weui-flex__item weather_data_right">
+                <view>{{rsDate4}}</view>
+                <view>
+                  <image src='{{rsImg4}}'></image>
+                </view>
+                <view>{{rsWeather4}}</view>
+                <view>{{rsWind4}}</view>
+                <view>{{rsTemperature4}}</view>
+            </view>
+      </view>
+    </view>
+ 
+  </view>
+</view>

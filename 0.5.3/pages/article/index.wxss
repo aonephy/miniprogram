@@ -1,0 +1,26 @@
+/* pages/article/index.wxss */
+.weui-panel_hd{
+  border-bottom: 0rpx;
+  border-left: 5px solid #64a4fc;
+  margin: 5px 10px;
+  padding-left: 15px;
+  font-size: 0.9em;
+  font-weight: 800;
+  color:#000;
+}
+.weui-media-box__hd_in-appmsg{
+  width: 90px;
+  height: 72px;
+}
+.weui-media-box__bd_in-appmsg{
+  height: 72px;
+}
+.weui-media-box__desc{
+  float: right;
+}
+.weui-media-box__desc:before{
+  content: '阅读 ：';
+}
+.weui-media-box__title{
+  height:55px;
+}

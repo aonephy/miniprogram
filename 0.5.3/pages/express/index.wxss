@@ -1,0 +1,18 @@
+/* pages/translate/index.wxss */
+.weui-cells_after-title{
+  border-left: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+  border-radius: 3px;
+}
+.box{
+  margin: 10px;
+}
+.result{
+  padding:8px;
+  border-radius: 3px;
+  min-height:300px;
+  font-size: 0.9em;
+}
+button[type='primary']{
+  background:#64a4fc;
+}

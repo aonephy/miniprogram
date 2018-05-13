@@ -1,0 +1,65 @@
+/* pages/account/list.wxss */
+.page__title{
+  text-align: center;
+  padding: 0px;
+  font-size: 1.3em;
+}
+.page__hd{
+  background: #64a4fc;
+  color: #fff;
+  font-size: 1.2em;
+  position: fixed;
+  font-weight: 800;
+  width: 100%
+}
+.page__bd{
+  padding-top:90rpx; 
+}
+.weui-flex{
+  text-align: center;
+  padding: 5px 0px;
+}
+.weui-flex .weui-flex__item{ 
+  border-right:1px solid #ccc; 
+}
+.weui-flex .weui-flex__item:last-child{
+  border-right:0px; 
+}
+.list-1{
+  background: aliceblue;
+}
+.weui-flex__item{
+  font-size: 0.9em;
+}
+.loadMore{
+  color:#aaa;
+  text-align: center;
+  font-size: 0.9em;
+  padding: 5px;
+  border-top:1px solid #ccc;
+  border-bottom:1px solid #ccc;
+}
+button{
+  background:#64a4fc;
+  color: #fff
+}
+.weui-flex-btn-group .weui-flex__item {
+  border: 0;
+}
+
+
+.weui-footer_fixed-bottom{
+  background:#fff;
+  border-top:1px solid #ccc;
+  bottom: 0;
+}
+.page__bd{
+  margin-bottom: 150rpx;
+}
+.weui-footer image{
+  width: 30px;
+  height: 30px
+}
+.list-font{
+  color: #666
+}
