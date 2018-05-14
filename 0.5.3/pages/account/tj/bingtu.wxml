@@ -1,0 +1,31 @@
+<view class="page">
+    <view class="page__hd">
+       
+       
+    </view>
+    <view class="page__bd page__bd_spacing">
+       
+
+    </view>
+
+    
+    <view class="weui-footer weui-footer_fixed-bottom">
+        <view class="weui-flex weui-flex-btn-group">
+            <view class="weui-flex__item" >
+              <navigator url="../list" open-type='redirect' hover-class="navigator-hover">
+                <image src='../../../image/tabbar/list.png'></image>
+              </navigator> 
+            </view>
+            <view class="weui-flex__item">
+              <navigator url="quxiantu" open-type='redirect' >
+                <image src='../../../image/icons/quxiantu.png'></image>
+              </navigator>
+            </view>
+            <view class="weui-flex__item" >
+              <navigator url="bingtu" open-type='redirect' >
+                <image src='../../../image/icons/bingtu.png'></image>
+              </navigator>  
+            </view>
+        </view>
+    </view>
+</view>

@@ -60,14 +60,11 @@
 
     <view class="weui-footer weui-footer_fixed-bottom">
         <view class="weui-flex weui-flex-btn-group">
-            
-            <view class="weui-flex__item">
-              <view bindtap='toHome'>
-                <image src='../../image/homeHL.png'></image>
-              </view>
-            </view>
-            <view class="weui-flex__item" bindtap='toList'>
+           
+            <view class="weui-flex__item" >
+              <navigator url="list" open-type='redirect' hover-class="navigator-hover">
                 <image src='../../image/tabbar/list.png'></image>
+              </navigator> 
             </view>
             
         </view>

@@ -1,0 +1,15 @@
+/* pages/account/tj/bingtu.wxss */
+.weui-footer_fixed-bottom{
+  background:#fff;
+  border-top:1px solid #ccc;
+  bottom: 0;
+}
+
+.weui-footer image{
+  width: 30px;
+  height: 30px
+}
+.weui-flex{
+  text-align: center;
+  padding: 5px 0px;
+}

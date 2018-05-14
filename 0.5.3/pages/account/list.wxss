@@ -13,12 +13,10 @@
   width: 100%
 }
 .page__bd{
+  margin-bottom: 150rpx;
   padding-top:90rpx; 
 }
-.weui-flex{
-  text-align: center;
-  padding: 5px 0px;
-}
+
 .weui-flex .weui-flex__item{ 
   border-right:1px solid #ccc; 
 }
@@ -46,20 +44,21 @@ button{
 .weui-flex-btn-group .weui-flex__item {
   border: 0;
 }
-
-
+.list-font{
+  color: #666
+}
+/*footer*/
 .weui-footer_fixed-bottom{
   background:#fff;
   border-top:1px solid #ccc;
   bottom: 0;
 }
-.page__bd{
-  margin-bottom: 150rpx;
-}
+
 .weui-footer image{
   width: 30px;
   height: 30px
 }
-.list-font{
-  color: #666
+.weui-flex{
+  text-align: center;
+  padding: 5px 0px;
 }

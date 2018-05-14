@@ -130,11 +130,6 @@ Page({
       note: e.detail.value
     })
   },
-  toList:function(){
-    wx.redirectTo({
-      url: 'list'
-    })
-  },
   submit:function (e) {
     
     var am = this.data.amount, that = this;
