@@ -55,7 +55,6 @@
 
     </view>
 
-
     <view class="weui-footer weui-footer_fixed-bottom">
         <view class="weui-flex weui-flex-btn-group">
            
@@ -67,6 +66,7 @@
             
         </view>
     </view>
+    
 </view>
 
 <!--mask-->  
