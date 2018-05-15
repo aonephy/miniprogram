@@ -75,10 +75,10 @@
   
   <!--drawer content-->  
     <radio-group class="radio-group" bindchange="radioChange">
-      <view class="radio" wx:for="{{options}}" wx:key='*this'>
+      <view class="drawer_radio" wx:for="{{options}}" wx:key='*this'>
         <radio value="{{item.name}}" checked="{{item.checked}}">{{item.value}}</radio>
       </view>
     </radio-group>
       
-  <view class="btn_ok" bindtap="powerDrawer" data-statu="close">确定</view>  
+  <view class="drawer_btn_ok" bindtap="powerDrawer" data-statu="close">确定</view>  
 </view> 

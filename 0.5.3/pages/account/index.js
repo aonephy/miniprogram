@@ -9,7 +9,6 @@ Page({
   data: {
     date:null,
     unionId:null,
-    option: [],
     options: [],
     optionIndex: '',
     focus:'false',
@@ -50,7 +49,7 @@ Page({
           wx.request({
             url: 'https://s.aonephy.top/api/miniprogram/getAccountTypeList.php',
             data: {
-              unionId: that.data.unionId
+              unionId: res.data
             },
             header: {
               'content-type': 'application/json' // 默认值
@@ -210,7 +209,8 @@ Page({
         }
       })
     }
-  }, powerDrawer: function (e) {
+  },
+  powerDrawer: function (e) {
     var currentStatu = e.currentTarget.dataset.statu;
     this.sho(currentStatu)
   },
