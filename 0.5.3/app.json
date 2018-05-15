@@ -1,13 +1,13 @@
 {
   "pages":[
-    "pages/account/list",
+    "pages/account/index",
     "pages/index/index",
     "pages/account/tj/quxiantu",
     "pages/account/tj/bingtu",
     "pages/ocr/index",
     "pages/constellation/index",
     "pages/constellation/list",
-    "pages/account/index",
+    "pages/account/list",
     "pages/article/index",
     "pages/article/list",
     "pages/exchange/index",
