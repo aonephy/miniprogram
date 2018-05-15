@@ -1,9 +1,9 @@
 {
   "pages":[
+    "pages/account/tj/bingtu",
     "pages/account/index",
     "pages/index/index",
     "pages/account/tj/quxiantu",
-    "pages/account/tj/bingtu",
     "pages/ocr/index",
     "pages/constellation/index",
     "pages/constellation/list",
