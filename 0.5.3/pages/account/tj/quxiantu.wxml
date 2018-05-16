@@ -22,7 +22,7 @@
               </navigator>
             </view>
             <view class="weui-flex__item" >
-              <navigator url="bingtu" open-type='redirect' >
+              <navigator url="bingtu?index=0" open-type='redirect' >
                 <image src='../../../image/icons/bingtu.png'></image>
               </navigator>  
             </view>
