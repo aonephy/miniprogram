@@ -113,7 +113,7 @@ Page({
     that.setData({
       camera: true,
       imgSrc: '',
-      text: []
+      text: [],
     })
 
     /*

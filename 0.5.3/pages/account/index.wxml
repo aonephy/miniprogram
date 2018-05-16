@@ -8,7 +8,7 @@
                 <view class="weui-cell__hd">
                     <view class="weui-label">日期</view>
                 </view>
-                <view class="weui-cell__bd">
+                <view class="weui-cell__bd weui-cell-selector-border">
                     <picker mode="date" value="{{date}}" start="2015-09-01" end="2100-12-31" bindchange="bindDateChange">
                         <view class="weui-input">{{date}}</view>
                     </picker>
@@ -19,7 +19,7 @@
                 <view class="weui-cell__hd weui-cell__hd_in-select-after">
                     <view class="weui-label">类型</view>
                 </view>
-                <view class="weui-cell__bd">
+                <view class="weui-cell__bd weui-cell-selector-border">
                         <view  bindtap='open' class="weui-select weui-select_in-select-after">{{optionIndex}}</view>
                     
                 </view>
@@ -57,13 +57,11 @@
 
     <view class="weui-footer weui-footer_fixed-bottom">
         <view class="weui-flex weui-flex-btn-group">
-           
             <view class="weui-flex__item" >
               <navigator url="list" open-type='redirect' hover-class="navigator-hover">
                 <image src='../../image/tabbar/list.png'></image>
               </navigator> 
             </view>
-            
         </view>
     </view>
     

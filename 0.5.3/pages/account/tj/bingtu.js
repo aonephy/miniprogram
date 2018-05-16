@@ -5,7 +5,6 @@ var that
 function initChart(canvas, width, height) {
   var CData;
   
-  
   wx.getStorage({
     key: 'unionId',
     success: function (res) {
@@ -14,7 +13,7 @@ function initChart(canvas, width, height) {
         unionId:res.data
       })
       wx.request({
-        url: 'https://s.aonephy.top/api/miniprogram/getAccountBingtuDateOptions.php',
+        url: 'https://s.aonephy.top/api/miniprogram/getAccountPieDataOptions.php',
         data: {
           unionId: that.data.unionId
         },
@@ -38,7 +37,7 @@ function initChart(canvas, width, height) {
           })
           
           wx.request({
-            url: 'https://s.aonephy.top/api/miniprogram/getAccountBingtuDate.php',
+            url: 'https://s.aonephy.top/api/miniprogram/getAccountPieData.php',
             data: {
               unionId: that.data.unionId,
               date: that.data.options[that.data.optionIndex]
@@ -47,7 +46,7 @@ function initChart(canvas, width, height) {
               'content-type': 'application/json' // 默认值
             },
             success: function (res) {
-            //  console.log(res.data)
+              console.log(res.data)
               CData = res.data;
               chart = echarts.init(canvas, null, {
                 width: width,
@@ -66,7 +65,7 @@ function initChart(canvas, width, height) {
                   },
                   type: 'pie',
                   center: ['50%', '50%'],
-                  radius: ['10%', '45%'],
+                  radius: ['10%', '50%'],
                   data: CData.data,
                   itemStyle: {
                     emphasis: {
@@ -112,7 +111,6 @@ Page({
     unionId:'',
     options: [],
     optionIndex:0,
-    showModalStatus: false,
   },
   onLoad:function(options){
     that = this;
@@ -148,31 +146,3 @@ Page({
 
 
 });
-
-function updateOption(that){
-  //update option
-  
-}
-
-function getData(that){
-  
-  wx.request({
-    url: 'https://s.aonephy.top/api/miniprogram/getAccountBingtuDate.php',
-    data: {
-      unionId: that.data.unionId,
-      date: that.data.options[that.data.optionIndex]
-    },
-    header: {
-      'content-type': 'application/json' // 默认值
-    },
-    success: function (res) {
-    //  console.log(res.data)
-    //  CData = res.data;
-      that.setData({
-        chartData:res.data,
-     //   ec: { onInit: initChart }
-      })
-
-    }
-  })
-}

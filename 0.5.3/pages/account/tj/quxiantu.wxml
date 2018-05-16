@@ -4,8 +4,24 @@
        
     </view>
     <view class="page__bd page__bd_spacing">
-       
-
+        <view class="weui-cell weui-cell_select">
+            <view class="weui-cell__hd weui-cell__hd_in-select-after">
+                <view class="weui-label">类型</view>
+            </view>
+            <view class="weui-cell__bd weui-cell-selector-border">
+              <picker bindchange="bindOptionChange" value="{{optionIndex}}" range="{{options}}">
+                  <view class="weui-select weui-select_in-select-after">{{options[optionIndex]}}</view>
+              </picker>
+                <!--
+                    <view  bindtap='open' class="weui-select weui-select_in-select-after">{{optionIndex}}</view>
+                -->  
+            </view>
+        </view>
+        
+        <view class="container">
+          <ec-canvas id="mychart-dom-pie" canvas-id="mychart-pie" ec="{{ ec }}"></ec-canvas>
+        </view>
+        <cover-view style='text-align:center'>月均消费：{{avarage}}</cover-view>
     </view>
 
     
@@ -22,10 +38,12 @@
               </navigator>
             </view>
             <view class="weui-flex__item" >
-              <navigator url="bingtu?index=0" open-type='redirect' >
-                <image src='../../../image/icons/bingtu.png'></image>
+              <navigator url="bar" open-type='redirect' >
+                <image src='../../../image/icons/bar.png'></image>
               </navigator>  
             </view>
         </view>
     </view>
 </view>
+
+

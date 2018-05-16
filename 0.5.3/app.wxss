@@ -8,8 +8,11 @@
     margin: 20rpx 0px;
     clear: both
 }
-
-
+/*选择器居中且增加左边框*/
+.weui-cell-selector-border{
+  text-align: center;
+  border-left: 1px solid #ccc;
+}
 
 /*仿模态窗*/
 .drawer_box {  
@@ -56,3 +59,44 @@
   width: 45%;
   margin:15rpx 0rpx 10rpx 15rpx;
 }
+
+/*footer style*/
+.weui-footer_fixed-bottom{
+  background:#fff;
+  border-top:1px solid #ccc;
+  bottom: 0;
+}
+
+.weui-footer cover-image,.weui-footer image{
+  width: 30px;
+  height: 30px;
+  margin: auto
+}
+.weui-flex{
+  text-align: center;
+  padding: 5px 0px;
+}
+
+
+/*Echart*/
+
+ec-canvas {
+  width: 100%;
+  height: 100%;
+}
+.container{
+  position: relative;
+  width: 100%;
+  height: 800rpx;
+  border-top: 1px solid #ccc;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  z-index: 10;
+} 

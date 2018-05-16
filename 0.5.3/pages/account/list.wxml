@@ -26,12 +26,10 @@
     
     <view class="weui-footer weui-footer_fixed-bottom">
         <view class="weui-flex weui-flex-btn-group">
-            
-            
             <view class="weui-flex__item" >
-              <navigator url="index" open-type='redirect'>
+              <navigator url="index" open-type='redirect' hover-class="navigator-hover">
                 <image src='../../image/add.png'></image>
-              </navigator>  
+              </navigator> 
             </view>
             <view class="weui-flex__item">
               <navigator url="tj/quxiantu" open-type='redirect' >
@@ -39,8 +37,8 @@
               </navigator>
             </view>
             <view class="weui-flex__item" >
-              <navigator url="tj/bingtu?index=0" open-type='redirect' >
-                <image src='../../image/icons/bingtu.png'></image>
+              <navigator url="tj/bar" open-type='redirect' >
+                <image src='../../image/icons/bar.png'></image>
               </navigator>  
             </view>
         </view>

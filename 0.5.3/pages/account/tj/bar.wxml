@@ -8,7 +8,7 @@
             <view class="weui-cell__hd weui-cell__hd_in-select-after">
                 <view class="weui-label">月份</view>
             </view>
-            <view class="weui-cell__bd">
+            <view class="weui-cell__bd weui-cell-selector-border">
               <picker bindchange="bindOptionChange" value="{{optionIndex}}" range="{{options}}">
                   <view class="weui-select weui-select_in-select-after">{{options[optionIndex]}}</view>
               </picker>
@@ -40,11 +40,6 @@
             <view class="weui-flex__item" >
               <navigator url="bar" open-type='redirect' >
                 <image src='../../../image/icons/bar.png'></image>
-              </navigator>  
-            </view>
-            <view class="weui-flex__item" >
-              <navigator url="bingtu" open-type='redirect' >
-                <image src='../../../image/icons/bingtu.png'></image>
               </navigator>  
             </view>
         </view>

@@ -1,7 +1,7 @@
 <!--pages/ocr/index.wxml-->
 <view class="page">
-    <view class="page__hd">
-      点击拍照，我将会把图片转成文字。
+    <view class="page__hd" wx:if='{{!camera}}'>
+      <view >点击拍照，我将会把图片转成文字。</view>
     </view>
     <view class="page__bd">
     

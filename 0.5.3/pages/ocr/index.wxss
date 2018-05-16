@@ -5,6 +5,10 @@ page,.page,.page__bd{
 .page__hd{
   text-align: center
 }
+.camera{
+  position: absolute;
+  top:0px;
+}
 .camera,.image{
   margin: auto;
   width: 100%;

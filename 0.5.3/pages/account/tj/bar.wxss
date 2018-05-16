@@ -1,0 +1,6 @@
+/* pages/account/tj/bar.wxss */
+
+.container{
+  width: 100%;
+  height: 900rpx; 
+} 
