@@ -1,0 +1,19 @@
+<import src="../../wxParse/wxParse.wxml"/>
+<view class="page">
+    <view class="page__hd">
+    </view>
+    <view class="page__bd">
+        <view class="weui-article">
+            <view class="weui-article__h1">{{rData.title}}</view>
+            <view class="weui-article__section">
+                <view class="weui-article__title">{{rData.viewNum}}</view>
+                <view class='line-css' style='display:{{flag}}'></view>
+                <view class="weui-article__section">
+                    
+                   <template is="wxParse" data="{{wxParseData:article.nodes}}"/>
+                    
+                </view>
+            </view>
+        </view>
+    </view>
+</view>
