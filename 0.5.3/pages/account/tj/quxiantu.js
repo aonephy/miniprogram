@@ -113,7 +113,7 @@ function avarage(){
   for(var i=0;i<arr.length;i++){
     sum += parseFloat(arr[i]);
   }
-  avar = sum/arr.length;
+  avar = (sum/arr.length).toFixed(2);
   return '￥ '+avar
 }
 
