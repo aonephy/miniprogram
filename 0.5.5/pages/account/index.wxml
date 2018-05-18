@@ -1,0 +1,82 @@
+<view class="page">
+    <view class="page__hd">
+
+    </view>
+    <view class="page__bd">
+      <view class="weui-cells weui-cells_after-title">    
+            <view class="weui-cell weui-cell_input">
+                <view class="weui-cell__hd">
+                    <view class="weui-label">日期</view>
+                </view>
+                <view class="weui-cell__bd">
+                    <picker mode="date" value="{{date}}" start="2015-09-01" end="2100-12-31" bindchange="bindDateChange">
+                        <view class="weui-input">{{date}}</view>
+                    </picker>
+                </view>
+            </view>
+
+            <view class="weui-cell weui-cell_select">
+                <view class="weui-cell__hd weui-cell__hd_in-select-after">
+                    <view class="weui-label">类型</view>
+                </view>
+                <view class="weui-cell__bd">
+                        <view  bindtap='open' class="weui-select weui-select_in-select-after">{{optionIndex}}</view>
+                    
+                </view>
+            </view>
+          </view>
+            <view class="weui-cells__title">金额</view>
+            <view class="weui-cells weui-cells_after-title">
+                <view class="weui-cell weui-cell_input">
+                    <view class="weui-cell__bd">
+                        <input class="weui-input" type='digit' focus='{{focus}}' value='{{amount}}' bindinput='InputAmount' placeholder="请输入消费金额" />
+                    </view>
+                </view>
+            </view>
+
+            <view class="weui-cells__title">备注</view>
+            <view class="weui-cells weui-cells_after-title">
+                <view class="weui-cell">
+                    <view class="weui-cell__bd">
+                        <textarea class="weui-textarea" bindinput='InputNote' placeholder='请输入备注' style='display:{{textareaShow}}'></textarea>
+                        <view class="weui-textarea-counter">0/200</view>
+                    </view>
+                </view>
+            </view>
+
+
+          <view class="weui-btn-area">
+              <button class="weui-btn" disabled="{{disabled}}" bindtap="submit">提交数据</button>
+
+              
+          </view>
+
+
+
+    </view>
+
+    <view class="weui-footer weui-footer_fixed-bottom">
+        <view class="weui-flex weui-flex-btn-group">
+            <view class="weui-flex__item" >
+              <navigator url="list" open-type='redirect' hover-class="navigator-hover">
+                <image src='../../image/tabbar/list.png'></image>
+              </navigator> 
+            </view>
+        </view>
+    </view>
+    
+</view>
+
+<!--mask-->  
+<view class="drawer_screen" bindtap="powerDrawer" data-statu="close" wx:if="{{showModalStatus}}"></view>  
+<view animation="{{animationData}}" class="drawer_box" wx:if="{{showModalStatus}}">  
+  
+  <!--drawer content-->  
+    <radio-group class="radio-group" bindchange="radioChange">
+      <view class="drawer_radio" wx:for="{{options}}" wx:key='*this'>
+        <radio value="{{item.name}}" checked="{{item.checked}}">{{item.value}}</radio>
+      </view>
+    </radio-group>
+      
+  <view class="drawer_btn_ok" bindtap="powerDrawer" data-statu="close">确定</view>  
+</view> 

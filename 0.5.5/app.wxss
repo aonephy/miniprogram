@@ -1,0 +1,102 @@
+/**app.wxss**/
+@import 'weui.wxss';
+@import "/wxParse/wxParse.wxss";
+@import "dist/index.wxss";
+.line-css {
+    height: 1px;
+    background:  #ccc;
+    margin: 20rpx 0px;
+    clear: both
+}
+/*选择器居中且增加左边框*/
+.weui-cell-selector-border{
+  text-align: center;
+  border-left: 1px solid #ccc;
+}
+
+/*仿模态窗*/
+.drawer_box {  
+  width: 650rpx;  
+  overflow: hidden;  
+  position: fixed;  
+  top: 30%;  
+  left: 0;  
+  z-index: 9999;  
+  background: #FAFAFA;  
+  margin: -150px 50rpx 0 50rpx;  
+  border-radius: 3px;  
+}  
+.drawer_screen {  
+  width: 100%;  
+  height: 100%;  
+  position: fixed;  
+  top: 0;  
+  left: 0;  
+  z-index: 100;  
+  background: #000;  
+  opacity: 0.5;  
+  overflow: hidden;  
+} 
+.drawer_title{  
+  padding:15px;  
+  font: 20px "microsoft yahei";  
+  text-align: center;  
+}  
+.drawer_content {  
+  height: 210px;  
+  overflow-y: scroll; /*超出父盒子高度可滚动*/  
+} 
+.drawer_btn_ok{  
+  padding: 10px;  
+  font: 20px "microsoft yahei";  
+  text-align: center;  
+  border-top: 1px solid #E8E8EA;  
+  color: #3CC51F;  
+}  
+
+.drawer_radio{
+  display: inline-block;
+  width: 45%;
+  margin:15rpx 0rpx 10rpx 15rpx;
+}
+
+/*footer style*/
+.weui-footer_fixed-bottom{
+  background:#fff;
+  border-top:1px solid #ccc;
+  bottom: 0;
+}
+
+.weui-footer cover-image,.weui-footer image{
+  width: 30px;
+  height: 30px;
+  margin: auto
+}
+.weui-flex{
+  text-align: center;
+  padding: 5px 0px;
+}
+
+
+/*Echart*/
+
+ec-canvas {
+  width: 100%;
+  height: 100%;
+}
+.container{
+  position: relative;
+  width: 100%;
+  height: 800rpx;
+  border-top: 1px solid #ccc;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  z-index: 10;
+} 
