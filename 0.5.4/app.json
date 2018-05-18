@@ -1,6 +1,7 @@
 {
   "pages":[
     "pages/index/index",
+    "pages/weather/index",
     "pages/account/index",
     "pages/account/tj/bar",
     "pages/account/tj/quxiantu",
@@ -14,7 +15,6 @@
     "pages/exchange/index",
     "pages/queryip/index",
     "pages/profile/index",
-    "pages/weather/index",
     "pages/express/index",
     "pages/translate/index"
   ],

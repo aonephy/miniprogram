@@ -21,7 +21,7 @@
             <view>热门推荐</view>
           </view>
             <block wx:for="{{grids}}" wx:key="*this">
-                <navigator url="{{item.Url}}" open-type="navigate" class="weui-grid" hover-class="weui-grid_active">
+                <navigator url="{{item.Url}}" open-type="navigate" class="weui-grid side-{{index%3}}" hover-class="weui-grid_active">
                     <image class="weui-grid__icon" src="{{item.imgUrl}}" />
                     <view class="weui-grid__label">{{item.Name}}</view>
                 </navigator>

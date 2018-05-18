@@ -62,6 +62,7 @@ function initChart(canvas, width, height) {
                 tooltip: {
                   trigger: 'axis'
                 },
+                animation: false,
                 legend: {
                   data: [res.data.goods]
                 },

@@ -2,27 +2,50 @@
 .page__bd{
   overflow: auto;
 }
+page{
+  height: 100%
+}
 .weui-search-bar{
-  margin-bottom: 10px
+  margin-bottom: 0px;
+  background-color: unset;
+  border: 0px;
+}
+.weui-search-bar__cancel-btn{
+  color: #fff;
 }
 image{
   width:40px;
   height: 30px;
 }
 .checkRes{
-  margin: 10px auto;
-  padding: 10px;
-  width: 80%;
+/*  margin: 10px auto;*/
+  background: #fff;
+  padding: 0px 0px;
+  width: 100%;
   text-align: center;
   line-height: 2;
-  background-color: #ccf0ff;
-  border-radius: 3px; 
-  font-size: 1em;
+  font-size: 0.9em;
+  color:#fff;
+  position:absolute;
+  bottom:0px;
+}
+.checkRes .weui-flex{
+  padding: 5px;
+}
+.checkRes .weui-flex__item{
+  background: #64a4fc;
+  padding: 10px 0px;
+  margin-top: 5px; 
+  margin-bottom: 5px;
+  border-radius: 3px;
+}
+.blue{
+  background-color: #64a4fc;
 }
 .weui-flex__item{
   text-align: center;
   vertical-align: middle;
 }
 .weather_data_right{
-  border-left:1px dashed #fff;
+  margin-left:5px;
 }
