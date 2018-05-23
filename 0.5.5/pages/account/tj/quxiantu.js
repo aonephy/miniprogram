@@ -96,6 +96,7 @@ function initChart(canvas, width, height) {
                 avarage: avarage()
               })
 
+              wx.hideLoading();
               return chart;
             }
           })
@@ -135,6 +136,12 @@ Page({
     wx.setNavigationBarTitle({
       title: '曲线图'
     })
+
+    wx.showLoading({
+      title: '加载中',
+      icon: 'loading'
+    });
+
     this.setData({
       optionIndex: options.index
     })

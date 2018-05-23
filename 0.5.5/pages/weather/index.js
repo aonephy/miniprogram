@@ -7,6 +7,7 @@ Page({
    * 页面的初始数据
    */
   data: {
+    geocoder:{},
     userInfo: {},
     items:[],
     inputShowed:'',
@@ -83,9 +84,12 @@ Page({
             'content-type': 'application/json' // 默认值
           },
           success: function (res) {
-          //  console.log(res.data.result.addressComponent)
+          //  console.log(res.data)
             var loc = res.data.result.addressComponent;
-            getRes(that,loc.city)
+            that.setData({
+              geocoder:res.data
+            })
+            getRes(that,loc.city+loc.district)
           }
         })
       }

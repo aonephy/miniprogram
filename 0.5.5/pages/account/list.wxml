@@ -1,6 +1,6 @@
-<view class="page">
+<view class="page {{noscroll}}">
     <view class="page__hd">
-        <view class="weui-flex weui-flex-title">
+        <view class="weui-flex weui-flex-title" bindtap='open' >
             <view class="weui-flex__item"><view class="placeholder">日期</view></view>
             <view class="weui-flex__item"><view class="placeholder">类型</view></view>
             <view class="weui-flex__item"><view class="placeholder">金额</view></view>
@@ -12,10 +12,10 @@
         
       <block wx:for="{{list}}" wx:key='*this'>
         <view class="weui-flex list-{{index%2}} list-font">
-            <view class="weui-flex__item"><view class="placeholder">{{item.date}}</view></view>
-            <view class="weui-flex__item"><view class="placeholder">{{item.type}}</view></view>
-            <view class="weui-flex__item"><view class="placeholder">{{item.amount}}</view></view>
-            <view class="weui-flex__item"><view class="placeholder">{{item.note}}</view></view>
+            <view class="weui-flex__item">{{item.date}}</view>
+            <view class="weui-flex__item">{{item.type}}</view>
+            <view class="weui-flex__item">{{item.amount}}</view>
+            <view class="weui-flex__item">{{item.note}}</view>
         </view>
        </block> 
             
@@ -44,3 +44,63 @@
         </view>
     </view>
 </view>
+
+<!--modal-->  
+  <!--modal background-->  
+<view class="drawer_screen" bindtap="powerDrawer" data-statu="close" wx:if="{{showModalStatus}}"></view>  
+<view class="drawer_box" wx:if="{{showModalStatus}}">  
+  <!--drawer content-->  
+  
+  <view class="weui-flex" >
+      <view class="weui-flex__item">
+        <view class="placeholder">年份</view>
+        <view class='selectAll'>
+          <checkbox-group id='selectAllYear' bindchange="selectAll">
+            <checkbox checked='{{selectAllYear}}' value='1'/>全部
+          </checkbox-group>
+        </view>
+         
+        <view>
+         
+          <checkbox-group id='filterYearRs' class='checkbox-group' bindchange="checkboxChange">
+            
+            <label class="checkbox" wx:for="{{filterYear}}" wx:key='*this'>
+              <checkbox value="{{item.value}}" checked="{{item.checked}}"/>{{item.name}}
+            </label>
+          </checkbox-group>
+        </view>
+      </view>
+      <view class="weui-flex__item" style='width:30%'>
+        <view class="placeholder">月份</view>
+        <view class='selectAll'>
+          <checkbox-group id='selectAllMonth' bindchange="selectAll">
+            <checkbox checked='{{selectAllMonth}}' value='1'/>全部
+          </checkbox-group>  
+        </view>
+        <view>
+          <checkbox-group id='filterMonthRs' class='checkbox-group' bindchange="checkboxChange" style='text-align:left;margin-left:20px;'>
+            <label class="checkbox" wx:for="{{filterMonth}}" wx:key='*this'>
+              <checkbox value="{{item.value}}" checked="{{item.checked}}"/>{{item.name}}
+            </label>
+          </checkbox-group>
+        </view>
+      </view>
+      <view class="weui-flex__item" style='width:40%'>
+        <view class="placeholder">物品</view>
+        <view class='selectAll'>
+          <checkbox-group id='selectAllGoods' bindchange="selectAll">
+            <checkbox checked='{{selectAllGoods}}' value='1'/>全部
+          </checkbox-group>
+        </view>
+        <view>
+          <checkbox-group id='filterGoodsRs' class='checkbox-group' bindchange="checkboxChange" style='text-align:left;margin-left:5px;max-height:720rpx;overflow:auto'>
+            <label class="checkbox" wx:for="{{filterGoods}}" wx:key='*this'>
+              <checkbox value="{{item.value}}" checked="{{item.checked}}"/>{{item.name}}
+            </label>
+          </checkbox-group>
+        </view>
+      </view>
+  </view>
+      
+  <view class="drawer_btn_ok" bindtap="powerDrawer" data-statu="close">确定</view>  
+</view> 

@@ -141,6 +141,9 @@ function initChart(canvas, width, height) {
                 ]
               };
               chart.setOption(option);
+
+              wx.hideLoading();
+              
               return chart;
             }
           })
@@ -177,6 +180,12 @@ Page({
     wx.setNavigationBarTitle({
       title: '柱状图'
     })
+
+    wx.showLoading({
+      title: '加载中',
+      icon: 'loading'
+    });
+
     this.setData({
       optionIndex: options.index
     })

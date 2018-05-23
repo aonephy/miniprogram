@@ -20,7 +20,7 @@
                     <view class="weui-label">类型</view>
                 </view>
                 <view class="weui-cell__bd">
-                        <view  bindtap='open' class="weui-select weui-select_in-select-after">{{optionIndex}}</view>
+                        <view bindtap='open' class="weui-select weui-select_in-select-after">{{optionIndex}}</view>
                     
                 </view>
             </view>
@@ -67,16 +67,16 @@
     
 </view>
 
-<!--mask-->  
+<!--modal-->  
+  <!--modal background-->  
 <view class="drawer_screen" bindtap="powerDrawer" data-statu="close" wx:if="{{showModalStatus}}"></view>  
 <view animation="{{animationData}}" class="drawer_box" wx:if="{{showModalStatus}}">  
-  
   <!--drawer content-->  
-    <radio-group class="radio-group" bindchange="radioChange">
-      <view class="drawer_radio" wx:for="{{options}}" wx:key='*this'>
-        <radio value="{{item.name}}" checked="{{item.checked}}">{{item.value}}</radio>
-      </view>
-    </radio-group>
+  <radio-group class="radio-group" bindchange="radioChange">
+    <view class="drawer_radio" wx:for="{{options}}" wx:key='*this'>
+      <radio value="{{item.name}}" checked="{{item.checked}}">{{item.value}}</radio>
+    </view>
+  </radio-group>
       
   <view class="drawer_btn_ok" bindtap="powerDrawer" data-statu="close">确定</view>  
 </view> 

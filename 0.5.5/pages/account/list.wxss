@@ -18,7 +18,9 @@
 }
 
 .weui-flex .weui-flex__item{ 
-  border-right:1px solid #ccc; 
+  border-right:1rpx solid #eee; 
+  flex: unset;
+  width: 34%
 }
 .weui-flex .weui-flex__item:last-child{
   border-right:0px; 
@@ -61,4 +63,26 @@ button{
 .weui-flex{
   text-align: center;
   padding: 5px 0px;
+}
+.drawer_box .weui-flex{
+  padding:0px;
+}
+
+.checkbox{
+  display: block;
+  margin: 10rpx auto;
+}
+.checkbox-group{
+  margin-top: 10px;
+}
+.placeholder{
+  font-weight: 900;
+}
+.drawer_box .placeholder,.drawer_box .selectAll{
+  border-bottom: 1rpx solid #eee;
+  padding: 6px 0px;
+}
+.drawer_box .placeholder{
+  background: #a4a0fc;
+  color: #fff;
 }

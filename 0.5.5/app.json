@@ -1,7 +1,8 @@
 {
   "pages":[
-    "pages/weather/index",
     "pages/index/index",
+    "pages/account/list",
+    "pages/weather/index",
     "pages/account/index",
     "pages/account/tj/bar",
     "pages/account/tj/quxiantu",
@@ -9,7 +10,6 @@
     "pages/ocr/index",
     "pages/constellation/index",
     "pages/constellation/list",
-    "pages/account/list",
     "pages/article/index",
     "pages/article/list",
     "pages/exchange/index",
@@ -21,7 +21,7 @@
   "window":{
     "backgroundTextStyle":"light",
     "navigationBarBackgroundColor": "#64a4fc",
-    "navigationBarTitleText": "皮皮侠",
+    "navigationBarTitleText": "皮皮侠小助手",
     "navigationBarTextStyle":"#fff",
     "enablePullDownRefresh":true
   },
