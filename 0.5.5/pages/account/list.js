@@ -170,7 +170,7 @@ Page({
     })
     curPage = 1;
     
-    load(this,1)
+    load(this, curPage++)
 
   },
   selectAll:  function(e){
@@ -255,7 +255,7 @@ Page({
 })
 
 function load(that, curPage){
-
+  console.log(curPage)
   wx.showLoading({
     title: '加载中',
     icon: 'loading'
