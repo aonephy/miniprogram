@@ -1,0 +1,52 @@
+<view class="page">
+   
+    <view class="page__bd">
+      <view class="weui-btn-area">
+       
+          <view class="weui-flex box">
+            <view class="weui-flex__item">
+                 
+              <picker bindchange="bindFromChange" value="{{fromCode}}" range="{{countryList[1]}}">
+                  <button type="default">{{fromC}}</button>
+              </picker>
+            
+            </view>
+            <view class="weui-flex change">
+              <view>
+              <image src='../../image/icons/exchange_409.png'></image>
+              </view>
+            </view>
+            <view class="weui-flex__item">
+                <picker bindchange="bindToChange" value="{{toCode}}" range="{{countryList[1]}}">
+                  <button type="default" >{{toC}}</button>
+              </picker>
+            </view>
+          </view>
+    
+          <view class="weui-cell weui-cell_input box">  
+                <input class="weui-input" type='number' focus='{{focus}}' bindinput='Input' value='{{amount}}' placeholder="请输金额" />
+            </view>
+           <view class="box">
+              <button type='primary' bindtap='Submit'>查询</button>
+            </view>
+          </view>
+
+        <view class="weui-cells__title">查询结果</view>
+          <view class="weui-cells weui-cells_after-title">
+            <view class="weui-cell">
+                <view class="weui-cell__bd">目前汇率：</view>
+                <view class="weui-cell__ft">{{curRate}}</view>
+            </view>
+            <view class="weui-cell">
+                <view class="weui-cell__bd">转换后金额：</view>
+                <view class="weui-cell__ft">{{resMoney}}</view>
+            </view>
+
+            <view class="weui-cell">
+                <view class="weui-cell__bd">刷新时间：</view>
+                <view class="weui-cell__ft">{{time}}</view>
+            </view>
+        </view>
+    </view>
+
+</view>
