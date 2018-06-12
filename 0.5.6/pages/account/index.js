@@ -11,7 +11,8 @@ Page({
     unionId:null,
     options: [],
     optionIndex: '',
-    focus:'false',
+    ss:'',
+    focus:false,
     amount:'',
     note:'',
     disabled:false,
@@ -29,13 +30,30 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    console.log(options)
+    
+    wx.showLoading({
+      title: '加载中',
+      icon: 'loading'
+    });
+
+//页面加载后，默认打开分类选择菜单
+    this.setData({
+      showModalStatus: true,
+      textareaShow: 'none'
+    })
+
+
+
+
     var that = this;
       wx.setNavigationBarTitle({
         title: '记账'
       })
 
     this.setData({
-      date: util.formatTime2(new Date)
+      date: util.formatTime2(new Date),
+  //    optionIndex:options.option
     })
 
     
@@ -55,47 +73,36 @@ Page({
               'content-type': 'application/json' // 默认值
             },
             success: function (res) {
-                console.log(res.data)
+//              console.log(res.data)
                 var len = res.data.length;
                 var tmp = [];
                 for(var i=0;i<len;i++){
                   if(i==0) {
-                    var checked = true
+                    var checked = true;
                   }else {
                     checked = false;
                   }
                   tmp[i] = { name: res.data[i], value: res.data[i],checked:checked}
                 }
               that.setData({
-                options:tmp,
-                optionIndex:tmp[0].value
+                options: tmp,
+                optionIndex: tmp[0].value,//默认选中第一个，因为第一个是最常用的。
+                ss:'确定'
               })
-                
+              wx.hideLoading();
+              //确认类型
+          //    setOptions(that, options.option);
+
             }
           })
       }
     })
     
-    
-    
   },
   radioChange: function (e) {
+    var that = this;
     console.log('radio发生change事件，携带value值为：', e.detail.value)
-    var arr = this.data.options;
-    
-    var len = arr.length;
-    for (var i = 0; i < len; i++) {
-      if(arr[i].value == e.detail.value){
-        arr[i].checked = true;
-      }else{
-        arr[i].checked = false;
-      }
-    }
-    console.log(arr)
-    this.setData({
-      options:arr,
-      optionIndex:e.detail.value
-    })
+    setOptions(that,e.detail.value);
   },
   /**
    * 生命周期函数--监听页面初次渲染完成
@@ -268,3 +275,22 @@ Page({
 
 })
 
+//
+function setOptions(that,option){
+  console.log(that)
+  var arr = that.data.options;
+  console.log(arr) 
+  var len = arr.length;
+  for (var i = 0; i < len; i++) {
+    if (arr[i].value == option) {
+      arr[i].checked = true;
+    } else {
+      arr[i].checked = false;
+    }
+  }
+  
+  that.setData({
+    options: arr,
+    optionIndex: option
+  })
+}

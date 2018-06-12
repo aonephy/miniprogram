@@ -78,5 +78,5 @@
     </view>
   </radio-group>
       
-  <view class="drawer_btn_ok" bindtap="powerDrawer" data-statu="close">确定</view>  
+  <view class="drawer_btn_ok" bindtap="powerDrawer" data-statu="close">{{ss}}</view>  
 </view> 

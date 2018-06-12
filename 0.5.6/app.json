@@ -1,9 +1,10 @@
 {
   "pages":[
     "pages/index/index",
-    "pages/account/list",
-    "pages/weather/index",
     "pages/account/index",
+    "pages/account/list",
+    "pages/account/selectOption",
+    "pages/weather/index",
     "pages/account/tj/bar",
     "pages/account/tj/quxiantu",
     "pages/account/tj/bingtu",
@@ -16,8 +17,7 @@
     "pages/queryip/index",
     "pages/profile/index",
     "pages/express/index",
-    "pages/translate/index",
-    "pages/account/tmp"
+    "pages/translate/index"
   ],
   "window":{
     "backgroundTextStyle":"light",
