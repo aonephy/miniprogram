@@ -262,7 +262,7 @@ function load(that, curPage){
   });
   
   wx.request({
-    url: 'https://s.aonephy.top/api/miniprogram/getAccountList-.php',
+    url: 'https://s.aonephy.top/api/miniprogram/getAccountList.php',
     method:'GET',
     header: {
       'unionId': that.data.unionId,

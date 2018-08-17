@@ -50,7 +50,7 @@ Page({
           var data = JSON.parse(res.data.data).showapi_res_body;
           
             that.setData({
-              curRate:data.money/that.data.amount,
+              curRate:(data.money/that.data.amount).toFixed(4),
               resMoney:data.money,
               time:res.data.time
             })
