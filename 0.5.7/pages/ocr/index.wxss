@@ -1,0 +1,78 @@
+/* pages/ocr/index.wxss */
+page,.page,.page__bd{
+  height: 100%
+}
+.page__hd{
+  text-align: center
+}
+.camera{
+  position: absolute;
+  top:0px;
+}
+.camera,.image{
+  margin: auto;
+  width: 100%;
+  height: 100%;
+  display: block
+}
+.image{
+  width: 50%;
+  height: 50%
+}
+canvas{
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+audio{
+  width: 100%;
+  height: 30px;
+}
+textarea{
+  width: 90%;
+  border: 1px solid #ccc;
+}
+.img-btn{
+  display: block;
+  margin: 100rpx auto;
+  width: 60px;
+  height: 48px
+}
+.cover-1{  
+  width: 150rpx;  
+  height: 150rpx;  
+  border-radius: 150rpx;  
+  background-color: #dedcdc;  
+  display: flex;  
+  flex-direction: row;  
+  align-items: center;  
+  justify-content: center;  
+  position: absolute;  
+  bottom: 60rpx;  
+  left: 300rpx;  
+} 
+.cover-2{  
+  width: 110rpx;  
+  height: 110rpx;  
+  border-radius: 110rpx;  
+  background-color: #ffffff;  
+  display: flex;  
+  flex-direction: row;  
+  align-items: center;  
+  justify-content: center;  
+  color:#da2121;  
+  font-size: 32rpx;  
+}  
+.cover-3{  
+  position: absolute;  
+  bottom: 105rpx;  
+  left:95rpx;  
+} 
+.cover-4{  
+  position: absolute;  
+  top: 60rpx;  
+  right:40rpx;  
+} 
+.ocr-text{
+  margin-left: 20rpx;
+}

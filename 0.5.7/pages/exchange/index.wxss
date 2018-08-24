@@ -1,0 +1,22 @@
+/* pages/exchange/index.wxss */
+.weui-btn-area .box{
+  margin: 15px
+}
+.weui-cell_input{
+  border: 1px solid #ccc;
+  border-radius: 3px;  
+}
+.change,.change view{
+  margin: auto;
+  width:100rpx
+}
+.weui-flex image{
+  width: 20px;
+  height: 20px;
+  display: block;
+  margin: auto;
+}
+
+button[type='primary']{
+  background:#64a4fc;
+}

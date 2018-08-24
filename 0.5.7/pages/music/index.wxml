@@ -1,0 +1,39 @@
+<!--pages/ocr/index.wxml-->
+<view class="page">
+    <view class="page__hd" >
+      
+    </view>
+    <view class="page__bd" >
+      <view class="weui-panel__bd" id="musicList">
+        <block wx:for="{{musicList}}" wx:key="id" wx:for-index='idx'>
+          <view class="weui-media-box weui-media-box_appmsg" bindtap="selectMusic" data-index="{{idx}}">
+            <view class="weui-media-box__hd weui-media-box__hd_in-appmsg">
+              {{idx+1}}
+            </view>
+            <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
+              <view class="weui-media-box__title">{{item.title}}</view>
+              <view class="weui-media-box__desc">{{item.author}}</view>
+            </view>
+          </view>
+        </block>
+      </view>
+
+
+      
+
+      <view id="playBox">
+        <view id="musicInfo" wx:if="{{musicList[currentMusicIndex].title}}">{{musicList[currentMusicIndex].title}}</view>
+        <view id="musicInfo" wx:else>---</view>
+        <view id="prevBtn" class="weui-grid" bindtap='prevMusic'>
+          <image src="../../image/prev.png"></image>
+        </view>
+        <view id="playBtn" class="weui-grid" bindtap='pause'>
+          <image wx:if='{{playstatus}}' src="../../image/pause.png"></image>
+          <image wx:else src="../../image/play.png"></image>
+        </view>
+        <view id="nextBtn" class="weui-grid" bindtap='nextMusic'>
+          <image src="../../image/next.png"></image>
+        </view>
+      </view>
+    </view>
+</view>    
