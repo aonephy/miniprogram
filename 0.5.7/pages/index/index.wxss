@@ -26,7 +26,8 @@ swiper{
 }
 
 .weui-grid{
- border-color:#eee;
+ border-color:#fff;
+ width: 25%
 }
 .page{height:1000rpx}
 .side-2{

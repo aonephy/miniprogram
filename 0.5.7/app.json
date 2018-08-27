@@ -18,7 +18,8 @@
     "pages/profile/index",
     "pages/express/index",
     "pages/translate/index",
-    "pages/music/index"
+    "pages/music/index",
+    "pages/tax/index"
   ],
   "window":{
     "backgroundTextStyle":"light",
