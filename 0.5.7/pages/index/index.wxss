@@ -24,7 +24,9 @@ swiper{
 	border: 1px solid #ddd;
 	border-top: 0;
 }
-
+.weui-grids{
+  border-color: #eee;
+}
 .weui-grid{
  border-color:#fff;
  width: 25%

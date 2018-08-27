@@ -131,7 +131,7 @@ Page({
   pause:function(){
     const backgroundAudioManager = wx.getBackgroundAudioManager();
     if(this.data.currentMusicIndex==null){
-      this.playMusic(0)
+      this.playMusic(0);
     }
     if (this.data.playstatus) {
       this.setData({
