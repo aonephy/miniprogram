@@ -1,0 +1,21 @@
+/* pages/tax/index.wxss */
+.page{
+  margin: 0px auto;
+}
+.weui-cells_after-title{
+  border-left: 1px solid #ddd;
+  border-right: 1px solid #ddd;
+  border-radius: 3px;
+}
+
+.result{
+  border:1px solid #ddd;
+  border-radius: 3px;
+  min-height:10rem;
+  margin-top: 1rem;
+  padding: 0.6rem;
+}
+button[type='primary']{
+  margin-top: 1rem;
+  background:#64a4fc;
+}
