@@ -21,10 +21,10 @@
         <view class="container">
           <ec-canvas id="mychart-dom-pie" canvas-id="mychart-pie" ec="{{ ec }}"></ec-canvas>
         </view>
-        <cover-view style='padding-left:150rpx;'>
-          <cover-view>月均消费：{{avarage}}
+        <cover-view style='padding-left:100rpx;'>
+          <cover-view>近12个月均消费：{{avarage}}
           </cover-view> 
-          <cover-view>本月消费：{{currentMonth}}
+          <cover-view>最后一个月消费：{{currentMonth}}
           </cover-view>
         </cover-view>
 
