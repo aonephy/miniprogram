@@ -30,7 +30,7 @@ image{
   bottom:0px;
 }
 .checkRes .weui-flex{
-  padding: 3px;
+  padding: 1px;
 }
 .checkRes .weui-flex__item{
   background: #64a4fc;
@@ -45,7 +45,7 @@ image{
   vertical-align: middle;
 }
 .weather_data_right{
-  margin-left:3px;
+  margin-left:1px;
 }
 .weui-search-bar__label{
   line-height: unset;
