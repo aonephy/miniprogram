@@ -72,7 +72,7 @@ Page({
     wx.getLocation({
       type: 'wgs84',
       success: function (res) {
-      //  console.log(res)
+        console.log(res)
         var latitude = res.latitude
         var longitude = res.longitude
         var speed = res.speed
@@ -86,6 +86,10 @@ Page({
           success: function (res) {
           //  console.log(res.data)
             var loc = res.data.result.addressComponent;
+            if (loc.city =='东莞市'){
+              loc.district='';
+            }
+
             that.setData({
               geocoder:res.data
             })

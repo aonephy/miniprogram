@@ -42,10 +42,10 @@ Page({
       title: '账目表'
     })
     wx.getStorage({
-      key: 'unionId',
+      key: 'userInfo',
       success: function (res) {
 //        console.log(res.data)
-        that.data.unionId = res.data;
+        that.data.unionId = res.data.unionId;
         var tmp = loadFilteOptions(that);
        
       }

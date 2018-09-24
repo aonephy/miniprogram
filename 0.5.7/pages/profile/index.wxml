@@ -5,6 +5,9 @@
         <image class="userinfo-avatar" src='{{userInfo.avatarUrl}}'></image>
         <view class='userinfo-nickname'>{{userInfo.nickName}}</view>
       </view>
+      <view>
+        <button class='loginBtn' wx-if="{{!loginStatus}}" open-type="getUserInfo" bindgetuserinfo="onGotUserInfo" disabled="{{disabled}}">登录</button>
+      </view>
       <view class="weui-cells__title">您的设备信息</view>
         <view class="weui-cells weui-cells_after-title">
             <view class="weui-cell">

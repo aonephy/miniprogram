@@ -11,7 +11,7 @@
 		"newFeature": true
 	},
 	"compileType": "miniprogram",
-	"libVersion": "1.9.98",
+	"libVersion": "2.3.0",
 	"appid": "wxe38e10c891489376",
 	"projectname": "0.5.7",
 	"isGameTourist": false,

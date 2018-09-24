@@ -6,7 +6,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-    userInfo: null,
+    userInfo: '',
     grids: [],
     toView: 'red',
     scrollTop: 100,
@@ -21,25 +21,27 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    
-    var that = this
-    
-    wx.login({
+    this.loadUserInfo();
+  },
+  loadUserInfo:function(){
+    let that = this;
+    loadBanner(that);
+    wx.getStorage({
+      key: 'userInfo',
       success: function (res) {
-        var code = res.code;
-        
-        wx.getUserInfo({
-          success: function (res) {
-            loadBanner(that)
-          //  console.log(res)
-            getEnData(code, res, that)
-            
-          }
-        })
-
+        console.log(res)
+        if (res.data.openId) {
+          that.setData({
+            userInfo: res.data,
+          })
+        }
+        loadgrids(that);
+      },
+      fail: function (e) {
+        console.log(e)
+        loadgrids(that);
       }
     })
- 
   },
 
   /**
@@ -75,7 +77,10 @@ Page({
    * 页面相关事件处理函数--监听用户下拉动作
    */
   onPullDownRefresh: function () {
-    
+    let that = this;
+
+    this.loadUserInfo();
+    wx.stopPullDownRefresh();
   },
 
   /**
@@ -94,33 +99,7 @@ Page({
 })
 
 
-function getEnData(c, obj, that) {
 
-  wx.request({
-    url: 'https://s.aonephy.top/api/miniprogram/aes/',
-    data: {
-      code: c,
-      iv: obj.iv,
-      encryptedData: obj.encryptedData
-    },
-    header: {
-      'content-type': 'application/json' // 默认值
-    },
-    success: function (res) {
-    //  console.log(res.data)
-      that.data.userInfo = res.data
-      app.globalData.userInfo = res.data
-      wx.setStorage({
-        key: 'unionId',
-        data: res.data.unionId,
-        success: function (res) {
-      //    console.log(res)
-          loadgrids(that)
-        }
-      })
-    }
-  })
-}
 function loadBanner(that){
   wx.request({
     url: 'https://s.aonephy.top/api/miniprogram/getindexbanner.php',

@@ -19,3 +19,9 @@
 .info{
   text-align: center
 }
+.loginBtn{
+  width: 200rpx;
+  font-size: 30rpx;
+  background-color: #64a4fc;
+  color:#fff;
+}

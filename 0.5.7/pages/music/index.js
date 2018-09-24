@@ -18,10 +18,10 @@ Page({
     let that = this;
 
     wx.getStorage({
-      key: 'unionId',
+      key: 'userInfo',
       success: function (res) {
         //  console.log(res.data)
-        that.data.unionId = res.data;
+        that.data.unionId = res.data.unionId;
         that.loadMusicList()
       }
     })
@@ -130,15 +130,16 @@ Page({
   },
   pause:function(){
     const backgroundAudioManager = wx.getBackgroundAudioManager();
-    if(this.data.currentMusicIndex==null){
-      this.playMusic(0);
-    }
+   
     if (this.data.playstatus) {
       this.setData({
         playstatus: false
       })
       backgroundAudioManager.pause();
     }else{
+      if (this.data.currentMusicIndex == null) {
+        this.playMusic(0);
+      }
       this.setData({
         playstatus: true
       })

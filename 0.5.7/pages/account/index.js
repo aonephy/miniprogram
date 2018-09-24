@@ -58,16 +58,16 @@ Page({
 
     
     wx.getStorage({
-      key: 'unionId',
+      key: 'userInfo',
       success: function (res) {
       //  console.log(res.data)
-          that.data.unionId = res.data
+          that.data.unionId = res.data.unionId
           
           //update option
           wx.request({
             url: 'https://s.aonephy.top/api/miniprogram/getAccountTypeList.php',
             data: {
-              unionId: res.data
+              unionId: that.data.unionId
             },
             header: {
               'content-type': 'application/json' // 默认值

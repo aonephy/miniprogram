@@ -6,11 +6,11 @@ function initChart(canvas, width, height) {
   var CData;
 
   wx.getStorage({
-    key: 'unionId',
+    key: 'userInfo',
     success: function (res) {
       //  console.log(res.data)
       that.setData({
-        unionId: res.data
+        unionId: res.data.unionId
       })
       wx.request({
         url: 'https://s.aonephy.top/api/miniprogram/getAccountPieDataOptions.php',
