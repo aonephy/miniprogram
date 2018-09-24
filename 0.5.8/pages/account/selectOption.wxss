@@ -1,0 +1,14 @@
+/* pages/account/index.wxss */
+.desc{
+  border-bottom: 1rpx solid #dddddd;
+}
+.desc view{
+  text-align: center;
+  margin: 10px;
+  font-size: 1em;
+}
+
+.weui-grid{
+  border: 0rpx;
+  padding: 10px;
+}

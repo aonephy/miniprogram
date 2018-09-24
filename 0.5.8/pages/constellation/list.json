@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "zan-tab": "../../dist/tab/index"
+  },
+  "enablePullDownRefresh": false
+}

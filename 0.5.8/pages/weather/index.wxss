@@ -1,0 +1,52 @@
+/**index.wxss**/
+.page__bd{
+  overflow: auto;
+}
+page{
+  height: 100%
+}
+.weui-search-bar{
+  margin-bottom: 0px;
+  background-color: unset;
+  border: 0px;
+}
+.weui-search-bar__cancel-btn{
+  color: #fff;
+}
+image{
+  width:40px;
+  height: 30px;
+}
+.checkRes{
+/*  margin: 10px auto;*/
+  background: #fff;
+  padding: 0px 0px;
+  width: 100%;
+  text-align: center;
+  line-height: 2;
+  font-size: 0.9em;
+  color:#fff;
+  position:absolute;
+  bottom:0px;
+}
+.checkRes .weui-flex{
+  padding: 3px;
+}
+.checkRes .weui-flex__item{
+  background: #64a4fc;
+  padding: 10px 0px;
+  border-radius: 3px;
+}
+.blue{
+  background-color: #64a4fc;
+}
+.weui-flex__item{
+  text-align: center;
+  vertical-align: middle;
+}
+.weather_data_right{
+  margin-left:3px;
+}
+.weui-search-bar__label{
+  line-height: unset;
+}

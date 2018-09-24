@@ -1,0 +1,54 @@
+<view class="page">
+    <view class="page__hd">
+       
+       
+    </view>
+    <view class="page__bd page__bd_spacing">
+        <view class="weui-cell weui-cell_select">
+            <view class="weui-cell__hd weui-cell__hd_in-select-after">
+                <view class="weui-label">月份</view>
+            </view>
+            <view class="weui-cell__bd">
+              <picker bindchange="bindOptionChange" value="{{optionIndex}}" range="{{options}}">
+                  <view class="weui-select weui-select_in-select-after">{{options[optionIndex]}}</view>
+              </picker>
+                <!--
+                    <view  bindtap='open' class="weui-select weui-select_in-select-after">{{optionIndex}}</view>
+                -->  
+            </view>
+        </view>
+        
+        <view class="container">
+          <ec-canvas id="mychart-dom-pie" canvas-id="mychart-pie" ec="{{ ec }}"></ec-canvas>
+        </view>
+
+    </view>
+
+    
+    <view class="weui-footer weui-footer_fixed-bottom">
+        <view class="weui-flex weui-flex-btn-group">
+            <view class="weui-flex__item" >
+              <navigator url="../list" open-type='redirect' hover-class="navigator-hover">
+                <image src='../../../image/tabbar/list.png'></image>
+              </navigator> 
+            </view>
+            <view class="weui-flex__item">
+              <navigator url="quxiantu" open-type='redirect' >
+                <image src='../../../image/icons/quxiantu.png'></image>
+              </navigator>
+            </view>
+            <view class="weui-flex__item" >
+              <navigator url="bar" open-type='redirect' >
+                <image src='../../../image/icons/bar.png'></image>
+              </navigator>  
+            </view>
+            <view class="weui-flex__item" >
+              <navigator url="bingtu" open-type='redirect' >
+                <image src='../../../image/icons/bingtu.png'></image>
+              </navigator>  
+            </view>
+        </view>
+    </view>
+</view>
+
+
