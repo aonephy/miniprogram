@@ -7,7 +7,7 @@ Page({
    */
   data: {
     loginStatus:false,
-    userInfo:'',
+    userInfo:null,
     phoneInfo:{},
     code:null
   },
@@ -20,11 +20,11 @@ Page({
     wx.setNavigationBarTitle({
       title: '我的信息'
     })
-    //如果已经有storage userinfo则是登录成功了，不再登录。
+    //如果已经有storage userinfo则是登录成功了，不再登录,否则允许wx.login。
     wx.getStorage({
       key: 'userInfo',
       success: function (res) {
-        console.log(typeof(res.data));
+      //  console.log(typeof(res.data));
 
         if(res.data.openId){
           that.setData({
@@ -32,19 +32,34 @@ Page({
             loginStatus:true
           })
         }
+      },
+      fail:function(e){
+        wx.login({
+          success: function (res) {
+            console.log(res);
+            that.setData({
+              code: res.code
+            })
+
+          }
+        })
       }
       
     })
-    wx.login({
-      success: function (res) {
-        console.log(res);
-        that.setData({
-          code: res.code
-        })
-        
-      }
-    })
-
+    //没有code就触发login，获取code
+    /*
+    if(this.code==null){
+      wx.login({
+        success: function (res) {
+          console.log(res);
+          that.setData({
+            code: res.code
+          })
+          
+        }
+      })
+    }
+    */
     wx.getSystemInfo({
       success: function (res) {
         that.setData({
@@ -112,9 +127,6 @@ Page({
   onGotUserInfo:function(rs){
     console.log(rs)
     let that = this;
- //   that.setData({
-  //    userInfo: rs.detail.userInfo
-  //  })
 
     this.setData({
       disabled: true
