@@ -38,8 +38,8 @@
             <view class="weui-cells weui-cells_after-title">
                 <view class="weui-cell">
                     <view class="weui-cell__bd">
-                        <textarea class="weui-textarea" bindinput='InputNote' placeholder='请输入备注' style='display:{{textareaShow}}'></textarea>
-                        <view class="weui-textarea-counter">0/200</view>
+                        <textarea class="weui-textarea" bindinput='InputNote'maxlength="200"  placeholder='请输入备注' style='display:{{textareaShow}}'></textarea>
+                        <view class="weui-textarea-counter">{{textCount}}/200</view>
                     </view>
                 </view>
             </view>

@@ -17,7 +17,8 @@ Page({
     note:'',
     disabled:false,
     showModalStatus:false,
-    textareaShow: 'block'
+    textareaShow: 'block',
+    textCount:0
   },
   open:function(){
    this.setData({
@@ -169,7 +170,8 @@ Page({
   },
   InputNote: function (e) {
     this.setData({
-      note: e.detail.value
+      note: e.detail.value,
+      textCount: e.detail.value.length
     })
   },
   submit:function (e) {

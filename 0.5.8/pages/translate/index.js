@@ -7,6 +7,7 @@ Page({
   data: {
     content:'',
     input:'',
+    textCount:0
   },
 
   /**
@@ -66,7 +67,8 @@ Page({
   },
   Input: function (e) {
     this.setData({
-      input: e.detail.value
+      input: e.detail.value,
+      textCount:e.detail.value.length
     })
   },
   Submit:function(res){
