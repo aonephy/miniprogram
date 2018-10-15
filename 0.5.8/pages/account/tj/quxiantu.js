@@ -118,9 +118,19 @@ function avarage(){
     sum += parseFloat(arr[i]);
   }
   avar = (sum/(arr.length-1)).toFixed(2);
+  //计算当前月份
+  let d = new Date();
+  let currentDate = d.getFullYear()+'/'+(d.getMonth()+1);
+  
+  console.log(currentDate)
 
+  let currentMonth = that.data.chartData.data.tdata[currentDate];
+ 
+  console.log(currentMonth)
+
+  if (!currentMonth) currentMonth = 0;
   that.setData({
-    currentMonth:'￥ ' + that.data.chartData.data.amount[11]
+    currentMonth: '￥ ' + currentMonth
   })
   return '￥ '+avar
 }
